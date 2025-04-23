@@ -8,22 +8,19 @@ console.log(convertToCelsius(85));
 function describeTemperature(Fahrenheit) {
   const Celcius = convertToCelsius(Fahrenheit);
   if (Celcius < 0) {
-    return (message = "very cold");
+    return "very cold";
   } else if (Celcius < 20) {
-    return (message = "cold");
+    return "cold";
   } else if (Celcius < 30) {
-    return (message = "warm");
+    return "warm";
   } else if (Celcius < 40) {
-    return (message = "hot");
+    return "hot";
   } else {
-    return (message = "very hot");
+    return "very hot";
   }
 }
-//const input = prompt("Enter a number in fahrenheit.");
-//const Fahrenheit = { Number };
-{
-  //const Celcius = convertToCelsius(Fahrenheit);
-  //const message = describeTemperature(Fahrenheit);
-  // alert(`The temperature is ${Celcius} and it feels ${message}.`);
-}
-//where am I going wrong with combining the two in the same output?
+const Fahrenheit = prompt("Enter a number in fahrenheit.");
+const message = describeTemperature(Fahrenheit);
+alert(
+  `The temperature is ${convertToCelsius(Fahrenheit)} and it feels ${message}.`
+);
